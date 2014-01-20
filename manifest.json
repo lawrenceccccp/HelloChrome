@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+
+  "name": "PackageTracker",
+  "description": "THIS TRACKS PACKAGES",
+  "version": "1.0",
+
+  "permissions": [
+    "tabs",
+    "http://*/*",
+    "https://*/*"
+  ],
+ 
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html",
+    "default_tiltle": "Track stuff here"
+  },
+
+  "content_scripts": [
+    {
+        "matches": ["http://*/*", "https://*/*"],
+        "js": ["scraper.js"]
+    }
+]
+}
